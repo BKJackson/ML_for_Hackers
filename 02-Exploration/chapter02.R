@@ -192,6 +192,7 @@ c(mean(heights) - var(heights), mean(heights) + var(heights))
 
 c(mean(heights) - var(heights), mean(heights) + var(heights))
 #[1] 51.56409 81.17103
+
 range(heights)
 #[1] 54.26313 78.99874
 
@@ -260,7 +261,7 @@ ggplot(heights.weights, aes(x = Height)) +
 #
 
 ggplot(heights.weights, aes(x = Height)) +
-  geom_histogram(binwidth = 0.001)
+  geom_histogram(binwidth = 0.1)
 
 #
 # Snippet 23
@@ -300,7 +301,7 @@ ggplot(heights.weights, aes(x = Weight, fill = Gender)) +
 
 # Experiment with random numbers from the normal distribution.
 m <- 0
-s <- 1
+s <- 5
 ggplot(data.frame(X = rnorm(100000, m, s)), aes(x = X)) +
   geom_density()
 
@@ -319,10 +320,21 @@ range(cauchy.values)
 # Snippet 29
 #
 
-ggplot(data.frame(X = normal.values), aes(x = X)) +
-  geom_density()
-ggplot(data.frame(X = cauchy.values), aes(x = X)) +
-  geom_density()
+#ggplot(data.frame(X = normal.values), aes(x = X)) +
+#  geom_density()
+#ggplot(data.frame(X = cauchy.values), aes(x = X)) +
+#  geom_density()
+
+# Plot both curves on the same set of axes
+# This is more useful than the above. [JF]
+
+dn <- data.frame(X = normal.values)
+dc <- data.frame(X = cauchy.values)
+
+ggplot() +
+   geom_density(data = dn, aes(x = X)) +
+   geom_density(data = dc, aes(x = X)) +
+   xlim(-25, 25)
 
 #
 # Snippet 30
@@ -332,6 +344,17 @@ ggplot(data.frame(X = cauchy.values), aes(x = X)) +
 gamma.values <- rgamma(100000, 1, 0.001)
 ggplot(data.frame(X = gamma.values), aes(x = X)) +
   geom_density()
+
+# New plot with multiple gamma curves. [JF]
+g1 <- data.frame(X = (rgamma(100000, 1, 0.001)))
+g2 <- data.frame(X = (rgamma(100000, 1, 0.002)))
+g3 <- data.frame(X = (rgamma(100000, 1, 0.003)))
+
+ggplot() +
+   geom_density(data = g1, aes(x = X), colour = "black") +
+   geom_density(data = g2, aes(x = X), colour = "blue") +
+   geom_density(data = g3, aes(x = X), colour = "green") +
+   xlim(0, 6000)
 
 #
 # Snippet 31
@@ -383,6 +406,7 @@ ggplot(heights.weights, aes(x = Height, y = Weight, color = Gender)) +
 #
 # Snippet 35
 #
+# Male-Female Classification - based on height & weight data
 
 heights.weights <- transform(heights.weights,
                              Male = ifelse(Gender == 'Male', 1, 0))
