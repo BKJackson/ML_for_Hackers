@@ -1,0 +1,33 @@
+
+data.file <- file.path('01_heights_weights_genders.csv')
+
+heights.weights <- read.csv(data.file, header = TRUE, sep = ',')
+
+heights <- with(heights.weights, Height)
+
+summary(heights)
+
+c(quantile(heights, probs = 0.25), quantile(heights, probs = 0.75))
+
+// Calculate Variance
+my.var <- function(x) {
+  m <- mean(x)
+  return(sum((x - m) ^ 2) / (length(x)-1))
+}
+
+my.var(heights) - var(heights)
+
+ggplot(heights.weights, aes(x = Height)) + geom_histogram(binwidth = .5)
+
+ggplot(heights.weights, aes(x = Height)) + geom_density()
+
+ggplot(heights.weights, aes(x = Height, fill = Gender)) + geom_density()
+
+ggplot(heights.weights, aes(x = Weight, fill = Gender)) + geom_density()
+
+
+
+
+
+
+
