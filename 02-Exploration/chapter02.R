@@ -2,6 +2,7 @@
 # Date:            2011-11-11                                
 # Author:          John Myles White
 # Email:           jmw@johnmyleswhite.com
+# Updated by:      BKJackson (https://github.com/BKJackson)
 # Purpose:         Code for Chapter 2. Showcases tools for exploratory data analysis.
 # Data Used:       data/01_heights_weights_genders.csv
 # Packages Used:   ggplot2
@@ -14,6 +15,11 @@
 # Attribution-Share Alike 3.0 United States License: http://creativecommons.org/licenses/by-sa/3.0/us/
 
 # All rights reserved.
+
+# Changes by BKJackson: Mostly changes to the plotting functions. For example, it's more
+#                       straightforward to send images directly to the screen rather than
+#                       saving them to PDF. In many cases, the original code is simply commented
+#                       out rather than deleted.
 
 #
 # Snippet 1

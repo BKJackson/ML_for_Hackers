@@ -1,6 +1,7 @@
 # File-Name:       ufo_sightings.R           
 # Date:            2012-02-10                                
 # Author:          Drew Conway (drew.conway@nyu.edu)
+# Updated by:      BKJackson (https://github.com/BKJackson)
 # Purpose:         Code for Chapter 1.  In this case we will review some of the basic
 #                   R functions and coding paradigms we will use throughout this book.
 #                   This includes loading, viewing, and cleaning raw data; as well as
@@ -21,6 +22,12 @@
 # NOTE: If you are running this in the R console you must use the 'setwd' command to set the 
 # working directory for the console to whereever you have saved this file prior to running.
 # Otherwise you will see errors when loading data or saving figures!
+
+# Changes by BKJackson: Mostly changes to the plotting functions. For example, it's more
+#                       straightforward to send images directly to the screen rather than
+#                       saving them to PDF. In many cases, the original code is simply commented
+#                       out rather than deleted.
+
 
 # Load libraries and data
 library('ggplot2')    # We'll use ggplot2 for all of our visualizations
