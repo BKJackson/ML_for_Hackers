@@ -28,7 +28,6 @@
 #                       saving them to PDF. In many cases, the original code is simply commented
 #                       out rather than deleted.
 
-
 # Load libraries and data
 library('ggplot2')    # We'll use ggplot2 for all of our visualizations
 

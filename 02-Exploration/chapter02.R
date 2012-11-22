@@ -35,7 +35,7 @@ summary(heights)
 
 # Expected output.
 # Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-#54.26   63.51   66.32   66.37   69.17   79.00 
+# 54.26   63.51   66.32   66.37   69.17   79.00 
 
 #
 # Snippet 2
