@@ -14,3 +14,7 @@ For more information on FreeBSD see: [http://www.opensource.org/licenses/bsd-lic
 
 All images and materials produced by this code are licensed under the Creative Commons 
 Attribution-Share Alike 3.0 United States License: [http://creativecommons.org/licenses/by-sa/3.0/us/](http://creativecommons.org/licenses/by-sa/3.0/us/)
+
+## Updates by BKJackson ##
+
+I've added some updates to the code, mostly extra comments to help explain (to me) what certain lines of code are intended to do and changes to the plotting. For example, I prefer to print the results to the screen rather than saving them to a PDF. In most cases, the original code by the authors is retained and simply commented out with new or changed code added below. 
