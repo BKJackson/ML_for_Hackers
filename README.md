@@ -15,6 +15,6 @@ For more information on FreeBSD see: [http://www.opensource.org/licenses/bsd-lic
 All images and materials produced by this code are licensed under the Creative Commons 
 Attribution-Share Alike 3.0 United States License: [http://creativecommons.org/licenses/by-sa/3.0/us/](http://creativecommons.org/licenses/by-sa/3.0/us/)
 
-## ~~Updates by BKJackson~~ ##
+## ~Updates by BKJackson~ ##
 
 I've added some updates to the code, mostly extra comments to help explain (to me) what certain lines of code are intended to do. Also, I frequently made changes to the plots. For example, I prefer to print the results to the screen rather than saving them to a PDF. Also, variable values were sometimes changed to explore the impacts on the graphs. In most cases, the original code by the authors is retained and simply commented out with new or changed code added below. 
